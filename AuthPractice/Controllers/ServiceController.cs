@@ -21,9 +21,9 @@ namespace AuthPractice.Controllers
 
 
         [HttpGet]
-        public IActionResult Index(string Name)
+        public IActionResult Index(string name)
         {
-            return new JsonResult(new { data = new { text = $"Hello, {Name}" } });
+            return new JsonResult(new { data = new { text = $"Hello, {name}" } });
         } 
     }
 }

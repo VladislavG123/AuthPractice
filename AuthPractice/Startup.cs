@@ -50,6 +50,23 @@ namespace AuthPractice
                 if (context.Request.Path.Value.ToLower().Contains("service"))
                 {
                     // поиск в бд человека с именем переданного через get запрос и сравнение значения с header-ом
+                    if (context.Request.Query.ContainsKey("name"))
+                    {
+                        string name = context.Request.Query["name"].ToString();
+
+                        var userContext = context.RequestServices.GetService<UserContext>();
+
+                        var users = (await userContext.Users.Where(user => user.Name == name).ToListAsync());
+                        if (users.Count == 0) await context.Response.WriteAsync("Пошел вон!1");
+
+                        var user = users[0];
+
+                        if (!(user is null) && user.SecureCode == context.Request.Headers["Auth"].ToString())
+                        {
+                            await next.Invoke();
+                        } 
+                    }
+                    await context.Response.WriteAsync("Пошел вон!2");
                 }
                 await next.Invoke();
             });
