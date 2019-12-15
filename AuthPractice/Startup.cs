@@ -28,9 +28,9 @@ namespace AuthPractice
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<UserContext>(x => x.UseSqlServer("Server=home-pc; Database=AuthPractice; Trusted_Connection=True;"));
+            services.AddDbContext<UserContext>(x => x.UseNpgsql("Server=localhost; Database=Middleware; User ID = postgres; Password = postgres;"));
             services.AddScoped<UserContext>();
-            services.AddControllers();
+            services.AddMvc(x => x.EnableEndpointRouting = false);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -43,7 +43,7 @@ namespace AuthPractice
 
             app.UseHttpsRedirection();
 
-            app.UseRouting();
+            //app.UseRouting();
 
             app.Use(async (context, next) =>
             {
@@ -66,7 +66,8 @@ namespace AuthPractice
                             await next.Invoke();
                         } 
                     }
-                    await context.Response.WriteAsync("Пошел вон!2");
+                    else
+                        await context.Response.WriteAsync("Пошел вон!2");
                 }
                 await next.Invoke();
             });
@@ -80,10 +81,9 @@ namespace AuthPractice
             }
             await requestDelegate(context);
              */
-
-            app.UseEndpoints(endpoints =>
+            app.UseMvc(routes =>
             {
-                endpoints.MapControllers();
+                routes.MapRoute("default", "api/{controller}/{action}/{id?}");
             });
         }
     }
