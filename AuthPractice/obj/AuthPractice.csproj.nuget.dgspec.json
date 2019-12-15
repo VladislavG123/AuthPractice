@@ -1,27 +1,33 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\гороховв\\source\\repos\\AuthPractice\\AuthPractice\\AuthPractice.csproj": {}
+    "C:\\Users\\Vlad\\Source\\Repos\\VladislavG123\\AuthPractice\\AuthPractice\\AuthPractice.csproj": {}
   },
   "projects": {
-    "C:\\Users\\гороховв\\source\\repos\\AuthPractice\\AuthPractice\\AuthPractice.csproj": {
+    "C:\\Users\\Vlad\\Source\\Repos\\VladislavG123\\AuthPractice\\AuthPractice\\AuthPractice.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\гороховв\\source\\repos\\AuthPractice\\AuthPractice\\AuthPractice.csproj",
+        "projectUniqueName": "C:\\Users\\Vlad\\Source\\Repos\\VladislavG123\\AuthPractice\\AuthPractice\\AuthPractice.csproj",
         "projectName": "AuthPractice",
-        "projectPath": "C:\\Users\\гороховв\\source\\repos\\AuthPractice\\AuthPractice\\AuthPractice.csproj",
-        "packagesPath": "C:\\Users\\гороховв\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\гороховв\\source\\repos\\AuthPractice\\AuthPractice\\obj\\",
+        "projectPath": "C:\\Users\\Vlad\\Source\\Repos\\VladislavG123\\AuthPractice\\AuthPractice\\AuthPractice.csproj",
+        "packagesPath": "C:\\Users\\Vlad\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Vlad\\Source\\Repos\\VladislavG123\\AuthPractice\\AuthPractice\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\гороховв\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Vlad\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://nuget.timpotze.nl/api/v2/": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
